@@ -1,0 +1,141 @@
+.statistic {
+    background-color: #f8c76c;
+    padding: 100px 0;
+}
+
+.statistic__item-number {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #222;
+    /* animation: counter 5s infinite alternate ease-in-out; */
+}
+
+.statistic__item-des {
+    font-size: 12px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 16px;
+}
+
+.statistic__row {
+    justify-content: space-between;
+}
+
+.statistic__item {
+    text-align: center;
+}
+
+@media (max-width:1023px) {
+    .marginTop-item {
+        margin-top: 100px;
+    }
+}
+
+
+/* 1 */
+
+@property --num1 {
+    syntax: "<integer>";
+    initial-value: 6789;
+    inherits: false;
+}
+
+.statistic__item-number1 {
+    animation: counter1 3s ease-in-out;
+    counter-set: num var(--num1);
+}
+
+.statistic__item-number1::after {
+    content: counter(num);
+}
+
+@keyframes counter1 {
+    from {
+        --num1: 6000;
+    }
+    to {
+        --num1: 6789;
+    }
+}
+
+
+/* 2 */
+
+@property --num2 {
+    syntax: "<integer>";
+    initial-value: 4562;
+    inherits: false;
+}
+
+.statistic__item-number2 {
+    animation: counter2 3s ease-in-out;
+    counter-set: num var(--num2);
+}
+
+.statistic__item-number2::after {
+    content: counter(num);
+}
+
+@keyframes counter2 {
+    from {
+        --num2: 4000;
+    }
+    to {
+        --num2: 4562;
+    }
+}
+
+
+/* 3 */
+
+@property --num3 {
+    syntax: "<integer>";
+    initial-value: 2345;
+    inherits: false;
+}
+
+.statistic__item-number3 {
+    animation: counter3 3s ease-in-out;
+    counter-set: num var(--num3);
+}
+
+.statistic__item-number3::after {
+    content: counter(num);
+}
+
+@keyframes counter3 {
+    from {
+        --num3: 2000;
+    }
+    to {
+        --num3: 2345;
+    }
+}
+
+
+/* 4 */
+
+@property --num4 {
+    syntax: "<integer>";
+    initial-value: 150;
+    inherits: false;
+}
+
+.statistic__item-number4 {
+    animation: counter4 3s ease-in-out;
+    counter-set: num var(--num4);
+}
+
+.statistic__item-number4::after {
+    content: counter(num);
+}
+
+@keyframes counter4 {
+    from {
+        --num4: 100;
+    }
+    to {
+        --num4: 150;
+    }
+}

@@ -1,0 +1,2 @@
+
+export const KEY_ACCESS_TOKEN = 'KEY_ACCESS_TOKEN'

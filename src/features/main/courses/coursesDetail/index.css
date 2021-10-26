@@ -1,0 +1,11 @@
+.courses-img {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+
+.courses-detail {
+    display: flex;
+    padding: 32px 0;
+    flex-direction: column;
+}

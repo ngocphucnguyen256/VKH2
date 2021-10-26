@@ -1,0 +1,249 @@
+:root {
+    --white-color: #fff;
+    --back-color: #000;
+    --text-color: #333;
+    --hover-color: rgba(255, 255, 255, 0.7);
+    --primary-color: #f8c76c;
+    --navbar-bg: #222;
+    --height-header: 520px;
+    --navbar-height: 100px
+}
+
+* {
+    box-sizing: inherit;
+    /* max-width: 100%; */
+    /* overflow: auto */
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+.section-home {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* grow */
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* fadein and grow */
+
+@keyframes fadeIn-grow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* fadein and grow */
+
+@keyframes left-to-center {
+    0% {
+        left: 15%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: calc(50%);
+    }
+}
+
+@keyframes top-to-center {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: calc(50%);
+    }
+}
+
+.animation-fadein-1-delay {
+    animation: fadeIn ease-in 1s;
+    will-change: opacity;
+    animation-delay: 1.5s;
+    opacity: 0;
+    position: absolute;
+    bottom: 20%;
+    animation-fill-mode: forwards;
+}
+
+.animation-top-to-center-0-75 {
+    position: absolute;
+    animation: top-to-center ease-in 0.5s;
+    will-change: left;
+    opacity: 0;
+    transform: translateY(-75%);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.animation-left-to-center-0-75 {
+    position: absolute;
+    animation: left-to-center ease-in 0.75s;
+    will-change: left;
+    top: 15%;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.animation-fadein-0-3 {
+    animation: fadeIn ease-in 0.3s;
+    will-change: opacity;
+}
+
+.animation-grow-0-3 {
+    animation: grow ease-in 0.3s;
+    will-change: transform;
+}
+
+.animtion-fadein-grow-0-3 {
+    animation: fadeIn-grow ease-in 0.3s;
+    will-change: opacity, transform;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    left: 0;
+}
+
+.modal__overlay {
+    position: absolute;
+    background-color: #00000020;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__body {
+    width: 300px;
+    margin: auto;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.white {
+    color: white;
+}
+
+.circle-white-trans {
+    --size: 40px;
+    border: 1px solid white;
+    display: flex;
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc(var(--size)/2);
+    background-color: transparent;
+}
+
+.circle-white-trans:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.center-flex {
+    margin: auto;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.vertical-menu,
+.vertical-menu-multilevel {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 0 8px;
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    justify-content: center;
+    right: 10px;
+}
+
+.vertical-menu-multilevel {
+    display: block;
+    right: unset;
+    left: 0px;
+}
+
+.vertical-menu-item {
+    color: var(--text-color);
+    width: 100%;
+    padding: 8px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider {
+    height: 0.2px;
+    /* width: calc(100%-16px);
+    background-color: #bbb8b8; */
+}
+
+.vertical-menu-item:hover {
+    color: var(--primary-color);
+}
+
+.error-message {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 8px;
+    color: red;
+}
+.btn {
+
+}

@@ -1,0 +1,162 @@
+.nav-bar__menu_right>ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+.navbar__image-home {
+    padding: 8px 0;
+    width: 200px;
+}
+
+.nav-bar-item-image {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    min-height: 73px;
+}
+
+.menu-item,
+.text-in-primary-button {
+    color: white;
+    font-size: 14px;
+    padding: 8px 26px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.showMenu {
+    position: relative;
+}
+
+.showMenu:hover .vertical-menu {
+    display: block;
+}
+
+.text-in-primary-button {
+    font-weight: 400;
+    min-width: 115px;
+    padding: 8px 25px;
+}
+
+.menu-item:hover,
+.text-in-primary-button:hover,
+.menu-group:hover,
+.search-item:hover,
+.nav-bar-item-image:hover {
+    cursor: pointer;
+}
+
+.white:hover {
+    color: var(--primary-color);
+}
+
+.hoverPrimaryColor:hover {
+    color: var(--primary-color);
+}
+
+.hoverPrimaryColor:hover .white {
+    color: var(--primary-color);
+}
+
+.search-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.background-radius_primary {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.background-radius_primary:hover {
+    background-color: #f3b23a;
+}
+
+.menu-group {
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
+    align-items: center;
+    color: white;
+}
+
+.menu-item-menu {
+    color: white;
+    padding: 8px 8px;
+    font-weight: bold;
+}
+
+.nav-bar {
+    background-color: var(--navbar-bg);
+    z-index: 100;
+    /* position: fixed; */
+    right: 0;
+    left: 0;
+    /* padding: 8px 0; */
+}
+
+@media (max-width: 740px) {
+    .hideInMobile {
+        display: none !important;
+    }
+    .showInMobile {
+        display: block;
+    }
+    .nav-bar {
+        --navbar-bg: #222;
+    }
+    .nav-bar-item-image {
+        margin: auto;
+    }
+    .nav-bar__menu_right>ul {
+        justify-content: space-between;
+        padding-inline-start: 32px;
+        padding-inline-end: 32px;
+    }
+    .search-item {
+        display: none;
+    }
+    .margrinInTabletMobile {
+        margin-top: var(--navbar-height);
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .nav-bar {
+        --navbar-bg: #222;
+    }
+    .hideInTablet {
+        display: none;
+    }
+    .showInTablet {
+        display: block;
+    }
+    .search-item {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-bar {
+        --navbar-bg: transparent;
+    }
+    .showInPC {
+        display: block;
+    }
+    .hideInPC {
+        display: none;
+    }
+    .search-item {
+        display: flex;
+    }
+}
+
+.menu-item-child {
+    padding-left: 40px;
+}

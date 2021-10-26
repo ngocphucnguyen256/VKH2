@@ -1,0 +1,261 @@
+.header-home {
+    display: block;
+    position: relative;
+    background-color: wheat;
+    width: 100%;
+    /* padding-top: 36.2%; */
+    height: var(--height-header);
+    overflow: hidden;
+}
+
+.header-home__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    /* background-image: url('http://gonthemes.info/eschool/wp-content/uploads/2018/11/slider02.jpg'); */
+    /* background-position: center;
+    background-size: cover; */
+    /* transition: all .5s; */
+    /* animation: shrink 10s ease; */
+}
+
+.zoomIn,
+.zoomOut {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    background-position: center;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+
+.zoomIn {
+    animation: shrinkReveser 24s infinite;
+}
+
+.zoomOut {
+    animation: shrink 24s infinite;
+}
+
+.header-content__text {
+    margin: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    padding: 6%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-content__text_title {
+    color: rgb(178, 178, 178);
+    font-weight: 400;
+    font-size: 13px;
+    /* top: 10%; */
+}
+
+.header-content__text_des {
+    font-size: 47px;
+    /* line-height: 55px; */
+    font-weight: 700;
+    padding: 3% 0;
+    text-align: center;
+    color: white;
+}
+
+.marginTop40 {
+    margin-top: 40px;
+}
+
+.header-content__text_button {
+    padding: 8px 25px;
+    color: white;
+}
+
+.header-content__text_button:hover {
+    cursor: pointer;
+}
+
+.matchParent {
+    width: 100%;
+    height: 100%;
+}
+
+.sizeSlide {
+    width: 100%;
+    height: var(--height-header);
+}
+
+.opaticy0-65 {
+    display: flex;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    /* animation: shrinkReveser 50s ease; */
+    /* opacity: 0.65; */
+}
+
+.header-home__image {
+    max-width: 100%;
+    max-height: 100%;
+    /* object-fit: contain; */
+    object-position: center;
+    /* Center the image within the element */
+}
+
+.chau {
+    background-color: turquoise;
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes shrinkReveser {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 740px) {
+     :root {
+        --height-header: 381px;
+    }
+    .header-content__text_des {
+        font-size: 24px;
+        padding: 1% 0;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+     :root {
+        --height-header: 363px;
+    }
+    .header-content__text_des {
+        font-size: 31px;
+    }
+}
+
+@media (min-width: 1024px) {
+     :root {
+        --height-header: 520px;
+    }
+}
+
+.z-index1 {
+    z-index: 1;
+}
+
+.z-index2 {
+    z-index: 2;
+}
+
+.header-hom__content__slide {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.header-hom__content__slide:hover .arrow {
+    display: flex;
+}
+
+.page-imagine,
+.arrow {
+    height: 50px;
+    border-radius: 25px;
+}
+
+.arrow {
+    color: white;
+    width: 50px;
+    margin: 16px;
+    display: none;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow:hover .page-imagine {
+    display: block;
+}
+
+.page-imagine {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    background-size: cover;
+    background-position: center;
+    display: none;
+}
+
+.page-imagine-left {
+    left: 0;
+}
+
+.page-imagine-right {
+    right: 0;
+}
+
+.page-image__content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.page-image__content-left {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.page-image__conten-arrow {
+    background-color: transparent;
+    margin: 0;
+}
+
+.page-image__conten-text {
+    flex: 1;
+    text-align: end;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.removeMargin {
+    margin: 0;
+}
+
+.page-image__conten-text-left {
+    text-align: left;
+}

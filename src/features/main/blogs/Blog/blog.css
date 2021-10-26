@@ -1,0 +1,30 @@
+.box-blog {
+    width: 870px;
+  
+}
+.box-blog > .content-cut {
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+
+    color: var(--text-color);
+    font-size: 18px;
+}
+.button-read{
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.button-read:hover {
+    background-color: black;
+}
+.blog-img {
+    width: 100%;
+    height: 576px;
+}
